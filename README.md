@@ -6,7 +6,7 @@ In this project, I executed Common Subexpression Elimination along with a few ot
 
 **Optimization 1a - Instruction Simplification:** Instructions will be simplified during the CSE traversal by checking if they can be simplified through simple constant folding. A counter named `CSESimplify` will be incremented for all instructions simplified.
 
-**Optimization 1b - Common Subexpression Elimination:** For each instruction, all other instructions with identical characteristics gets eliminated. These characteristics include the same opcode, same type, same number of operands, and same operands in the same order (without commutativity). The implementer will decide which opcodes can be eliminated by CSE. To implement CSE, a nested loop or recursion on the dominator tree will be utilized. The counter `CSEElim` will be created to count all instructions eliminated by CSE.
+**Optimization 1b - Common Subexpression Elimination:** For each instruction, all other instructions with identical characteristics gets eliminated. These characteristics include the same opcode, same type, same number of operands, and same operands in the same order (without commutativity). The implementer will decide which opcodes can be eliminated by CSE. To implement CSE, a nested loop or recursion on the dominator tree will be utilized. The counter `CSEBasic` will be created to count all instructions eliminated by CSE.
 
 **Optimization 2 - Redundant Load Elimination:** Redundant loads within the same basic block will be eliminated. If a load is encountered, the algorithm will search for redundant loads within the same basic block and replace them accordingly. A counter named `CSERLoad` will be incremented for each redundant load eliminated.
 
